@@ -92,7 +92,7 @@ class GiFHUD: UIView {
     
     class func dismiss (complate: ()->Void) {
         if (!self.instance.shown) {
-            return
+            return complate ()
         }
         
         self.instance.fadeOut({

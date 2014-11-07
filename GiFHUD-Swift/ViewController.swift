@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        GiFHUD.setGif("pika.gif")
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +20,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showPressed(sender: AnyObject) {
+        GiFHUD.show()
+    }
 
+    @IBAction func showWithOverlayPressed(sender: AnyObject) {
+        GiFHUD.showWithOverlay()
+        dispatch_after(2, dispatch_get_main_queue(), {
+            GiFHUD.dismiss()
+        })
+    }
+    
+    @IBAction func dismissPressed(sender: AnyObject) {
+        GiFHUD.dismiss()
+    }
+    
+    
 }
 
