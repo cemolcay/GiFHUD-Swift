@@ -32,10 +32,10 @@ You can set your gif with giving its `String` name, `NSBundle` url or `Array` of
 Optional values
 ---------------
 
-    let Size            150
-    let FadeDuration    0.3
-    let GifSpeed        0.3
-    let OverlayAlpha    0.3
+    let Size            : CGFloat           = 150
+    let FadeDuration    : NSTimeInterval    = 0.3
+    let GifSpeed        : CGFloat           = 0.3
+    let OverlayAlpha    : CGFloat           = 0.3
 
 If you want to customise the looking just edit these values
 
