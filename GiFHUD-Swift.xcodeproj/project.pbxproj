@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B25038611A0CECDE00CDAB1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25038601A0CECDE00CDAB1C /* AppDelegate.swift */; };
+		B25038631A0CECDE00CDAB1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25038621A0CECDE00CDAB1C /* ViewController.swift */; };
+		B25038661A0CECDE00CDAB1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B25038641A0CECDE00CDAB1C /* Main.storyboard */; };
+		B25038681A0CECDE00CDAB1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25038671A0CECDE00CDAB1C /* Images.xcassets */; };
+		B250386B1A0CECDE00CDAB1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25038691A0CECDE00CDAB1C /* LaunchScreen.xib */; };
+		B25038771A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25038761A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B25038711A0CECDE00CDAB1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B25038531A0CECDE00CDAB1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B250385A1A0CECDE00CDAB1C;
+			remoteInfo = "GiFHUD-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B250385B1A0CECDE00CDAB1C /* GiFHUD-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GiFHUD-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B250385F1A0CECDE00CDAB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25038601A0CECDE00CDAB1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B25038621A0CECDE00CDAB1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B25038651A0CECDE00CDAB1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B25038671A0CECDE00CDAB1C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B250386A1A0CECDE00CDAB1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B25038701A0CECDE00CDAB1C /* GiFHUD-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GiFHUD-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B25038751A0CECDE00CDAB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B25038761A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiFHUD_SwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B25038581A0CECDE00CDAB1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B250386D1A0CECDE00CDAB1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B25038521A0CECDE00CDAB1C = {
+			isa = PBXGroup;
+			children = (
+				B250385D1A0CECDE00CDAB1C /* GiFHUD-Swift */,
+				B25038731A0CECDE00CDAB1C /* GiFHUD-SwiftTests */,
+				B250385C1A0CECDE00CDAB1C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B250385C1A0CECDE00CDAB1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B250385B1A0CECDE00CDAB1C /* GiFHUD-Swift.app */,
+				B25038701A0CECDE00CDAB1C /* GiFHUD-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B250385D1A0CECDE00CDAB1C /* GiFHUD-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				B25038601A0CECDE00CDAB1C /* AppDelegate.swift */,
+				B25038621A0CECDE00CDAB1C /* ViewController.swift */,
+				B25038641A0CECDE00CDAB1C /* Main.storyboard */,
+				B25038671A0CECDE00CDAB1C /* Images.xcassets */,
+				B25038691A0CECDE00CDAB1C /* LaunchScreen.xib */,
+				B250385E1A0CECDE00CDAB1C /* Supporting Files */,
+			);
+			path = "GiFHUD-Swift";
+			sourceTree = "<group>";
+		};
+		B250385E1A0CECDE00CDAB1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B250385F1A0CECDE00CDAB1C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B25038731A0CECDE00CDAB1C /* GiFHUD-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				B25038761A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift */,
+				B25038741A0CECDE00CDAB1C /* Supporting Files */,
+			);
+			path = "GiFHUD-SwiftTests";
+			sourceTree = "<group>";
+		};
+		B25038741A0CECDE00CDAB1C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B25038751A0CECDE00CDAB1C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B250385A1A0CECDE00CDAB1C /* GiFHUD-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B250387A1A0CECDE00CDAB1C /* Build configuration list for PBXNativeTarget "GiFHUD-Swift" */;
+			buildPhases = (
+				B25038571A0CECDE00CDAB1C /* Sources */,
+				B25038581A0CECDE00CDAB1C /* Frameworks */,
+				B25038591A0CECDE00CDAB1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GiFHUD-Swift";
+			productName = "GiFHUD-Swift";
+			productReference = B250385B1A0CECDE00CDAB1C /* GiFHUD-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B250386F1A0CECDE00CDAB1C /* GiFHUD-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B250387D1A0CECDE00CDAB1C /* Build configuration list for PBXNativeTarget "GiFHUD-SwiftTests" */;
+			buildPhases = (
+				B250386C1A0CECDE00CDAB1C /* Sources */,
+				B250386D1A0CECDE00CDAB1C /* Frameworks */,
+				B250386E1A0CECDE00CDAB1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B25038721A0CECDE00CDAB1C /* PBXTargetDependency */,
+			);
+			name = "GiFHUD-SwiftTests";
+			productName = "GiFHUD-SwiftTests";
+			productReference = B25038701A0CECDE00CDAB1C /* GiFHUD-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B25038531A0CECDE00CDAB1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Cem Olcay";
+				TargetAttributes = {
+					B250385A1A0CECDE00CDAB1C = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					B250386F1A0CECDE00CDAB1C = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = B250385A1A0CECDE00CDAB1C;
+					};
+				};
+			};
+			buildConfigurationList = B25038561A0CECDE00CDAB1C /* Build configuration list for PBXProject "GiFHUD-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B25038521A0CECDE00CDAB1C;
+			productRefGroup = B250385C1A0CECDE00CDAB1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B250385A1A0CECDE00CDAB1C /* GiFHUD-Swift */,
+				B250386F1A0CECDE00CDAB1C /* GiFHUD-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B25038591A0CECDE00CDAB1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25038661A0CECDE00CDAB1C /* Main.storyboard in Resources */,
+				B250386B1A0CECDE00CDAB1C /* LaunchScreen.xib in Resources */,
+				B25038681A0CECDE00CDAB1C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B250386E1A0CECDE00CDAB1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B25038571A0CECDE00CDAB1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25038631A0CECDE00CDAB1C /* ViewController.swift in Sources */,
+				B25038611A0CECDE00CDAB1C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B250386C1A0CECDE00CDAB1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25038771A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B25038721A0CECDE00CDAB1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B250385A1A0CECDE00CDAB1C /* GiFHUD-Swift */;
+			targetProxy = B25038711A0CECDE00CDAB1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B25038641A0CECDE00CDAB1C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B25038651A0CECDE00CDAB1C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B25038691A0CECDE00CDAB1C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B250386A1A0CECDE00CDAB1C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B25038781A0CECDE00CDAB1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B25038791A0CECDE00CDAB1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B250387B1A0CECDE00CDAB1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GiFHUD-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B250387C1A0CECDE00CDAB1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "GiFHUD-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B250387E1A0CECDE00CDAB1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GiFHUD-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiFHUD-Swift.app/GiFHUD-Swift";
+			};
+			name = Debug;
+		};
+		B250387F1A0CECDE00CDAB1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GiFHUD-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiFHUD-Swift.app/GiFHUD-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B25038561A0CECDE00CDAB1C /* Build configuration list for PBXProject "GiFHUD-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B25038781A0CECDE00CDAB1C /* Debug */,
+				B25038791A0CECDE00CDAB1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B250387A1A0CECDE00CDAB1C /* Build configuration list for PBXNativeTarget "GiFHUD-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B250387B1A0CECDE00CDAB1C /* Debug */,
+				B250387C1A0CECDE00CDAB1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B250387D1A0CECDE00CDAB1C /* Build configuration list for PBXNativeTarget "GiFHUD-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B250387E1A0CECDE00CDAB1C /* Debug */,
+				B250387F1A0CECDE00CDAB1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B25038531A0CECDE00CDAB1C /* Project object */;
+}
