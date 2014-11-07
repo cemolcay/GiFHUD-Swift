@@ -14,6 +14,7 @@
 		B250386B1A0CECDE00CDAB1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25038691A0CECDE00CDAB1C /* LaunchScreen.xib */; };
 		B25038771A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25038761A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift */; };
 		B25038811A0CED2700CDAB1C /* GiFHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25038801A0CED2700CDAB1C /* GiFHUD.swift */; };
+		B25038831A0D065200CDAB1C /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = B25038821A0D065200CDAB1C /* pika.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		B25038751A0CECDE00CDAB1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B25038761A0CECDE00CDAB1C /* GiFHUD_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiFHUD_SwiftTests.swift; sourceTree = "<group>"; };
 		B25038801A0CED2700CDAB1C /* GiFHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiFHUD.swift; sourceTree = "<group>"; };
+		B25038821A0D065200CDAB1C /* pika.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		B250385D1A0CECDE00CDAB1C /* GiFHUD-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				B25038821A0D065200CDAB1C /* pika.gif */,
 				B25038601A0CECDE00CDAB1C /* AppDelegate.swift */,
 				B25038621A0CECDE00CDAB1C /* ViewController.swift */,
 				B25038641A0CECDE00CDAB1C /* Main.storyboard */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25038661A0CECDE00CDAB1C /* Main.storyboard in Resources */,
+				B25038831A0D065200CDAB1C /* pika.gif in Resources */,
 				B250386B1A0CECDE00CDAB1C /* LaunchScreen.xib in Resources */,
 				B25038681A0CECDE00CDAB1C /* Images.xcassets in Resources */,
 			);

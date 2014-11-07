@@ -26,7 +26,9 @@ class ViewController: UIViewController {
 
     @IBAction func showWithOverlayPressed(sender: AnyObject) {
         GiFHUD.showWithOverlay()
-        dispatch_after(2, dispatch_get_main_queue(), {
+
+        let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+        dispatch_after(delay, dispatch_get_main_queue(), {
             GiFHUD.dismiss()
         })
     }
@@ -34,7 +36,5 @@ class ViewController: UIViewController {
     @IBAction func dismissPressed(sender: AnyObject) {
         GiFHUD.dismiss()
     }
-    
-    
 }
 
