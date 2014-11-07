@@ -283,10 +283,10 @@ class GiFHUD: UIView {
     
     // MARK: Constants
     
-    let Size            : CGFloat = 150
-    let FadeDuration    : NSTimeInterval = 0.3
-    let GifSpeed        : CGFloat = 0.3
-    let OverlayAlpha    : CGFloat = 0.3
+    let Size            : CGFloat           = 150
+    let FadeDuration    : NSTimeInterval    = 0.3
+    let GifSpeed        : CGFloat           = 0.3
+    let OverlayAlpha    : CGFloat           = 0.3
     let Window          : UIWindow = (UIApplication.sharedApplication().delegate as AppDelegate).window!
     
     
