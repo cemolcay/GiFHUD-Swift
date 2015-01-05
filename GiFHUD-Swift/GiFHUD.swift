@@ -61,13 +61,13 @@ extension UIImageView {
     
     // MARK: Animation
     
-    func startAnimating() {
+    func startAnimatingGif() {
         if animatable {
             animatableImage!.resumeAnimation()
         }
     }
     
-    func stopAnimating() {
+    func stopAnimatingGif() {
         if animatable {
             animatableImage!.pauseAnimation()
         }
@@ -109,7 +109,7 @@ class AnimatedImage: UIImage {
         
         return duration
     }
-
+    
     
     // MARK: Constants
     
@@ -290,7 +290,7 @@ class GiFHUD: UIView {
     let Window          : UIWindow = (UIApplication.sharedApplication().delegate as AppDelegate).window!
     
     
-
+    
     // MARK: Variables
     
     var overlayView     : UIView?
@@ -309,7 +309,7 @@ class GiFHUD: UIView {
     }
     
     
-
+    
     // MARK: Init
     
     override init() {
@@ -332,7 +332,7 @@ class GiFHUD: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     
     
     // MARK: HUD
@@ -346,6 +346,13 @@ class GiFHUD: UIView {
     
     class func show () {
         dismiss({
+            
+            if let anim = self.instance.imageView?.animationImages {
+                self.instance.imageView?.startAnimating()
+            } else {
+                self.instance.imageView?.startAnimatingGif()
+            }
+            
             self.instance.Window.bringSubviewToFront(self.instance)
             self.instance.shown = true
             self.instance.fadeIn()
@@ -359,6 +366,12 @@ class GiFHUD: UIView {
         
         self.instance.overlay().removeFromSuperview()
         self.instance.fadeOut()
+        
+        if let anim = self.instance.imageView?.animationImages {
+            self.instance.imageView?.stopAnimating()
+        } else {
+            self.instance.imageView?.stopAnimatingGif()
+        }
     }
     
     class func dismiss (complate: ()->Void) {
@@ -370,6 +383,12 @@ class GiFHUD: UIView {
             self.instance.overlay().removeFromSuperview()
             complate ()
         })
+        
+        if let anim = self.instance.imageView?.animationImages {
+            self.instance.imageView?.stopAnimating()
+        } else {
+            self.instance.imageView?.stopAnimatingGif()
+        }
     }
     
     
@@ -377,7 +396,7 @@ class GiFHUD: UIView {
     // MARK: Effects
     
     func fadeIn () {
-        imageView?.startAnimating()
+        imageView?.startAnimatingGif()
         UIView.animateWithDuration(FadeDuration, animations: {
             self.alpha = 1
         })
@@ -388,7 +407,7 @@ class GiFHUD: UIView {
             self.alpha = 0
             }, completion: { (complate) in
                 self.shown = false
-                self.imageView?.stopAnimating()
+                self.imageView?.stopAnimatingGif()
         })
     }
     
@@ -397,7 +416,7 @@ class GiFHUD: UIView {
             self.alpha = 0
             }, completion: { (complate) in
                 self.shown = false
-                self.imageView?.stopAnimating()
+                self.imageView?.stopAnimatingGif()
                 complated ()
         })
     }
@@ -421,18 +440,23 @@ class GiFHUD: UIView {
     // MARK: Gif
     
     class func setGif (name: String) {
+        self.instance.imageView?.animationImages = nil
+        self.instance.imageView?.stopAnimating()
+        
         self.instance.imageView?.image = AnimatedImage.imageWithName(name, delegate: self.instance.imageView)
-        self.instance.imageView?.startAnimating()
     }
     
     class func setGif (bundle: NSBundle) {
+        self.instance.imageView?.animationImages = nil
         self.instance.imageView?.stopAnimating()
+        
         self.instance.imageView?.image = AnimatedImage (data: NSData(contentsOfURL: bundle.resourceURL!)!, delegate: nil)
     }
     
-    class func SetGif (images: Array<UIImage>) {
-        self.instance.imageView?.stopAnimating()
+    class func setGif (images: [UIImage]) {
+        self.instance.imageView?.stopAnimatingGif()
+        
         self.instance.imageView?.animationImages = images
-        self.instance.imageView?.startAnimating()
+        self.instance.imageView?.animationDuration = NSTimeInterval(self.instance.GifSpeed)
     }
 }
