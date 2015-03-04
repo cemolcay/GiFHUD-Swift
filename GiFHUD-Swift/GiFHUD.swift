@@ -94,10 +94,10 @@ class AnimatedImage: UIImage {
         let GIFProperties: NSDictionary? = imageProperties[String(kCGImagePropertyGIFDictionary)] as? NSDictionary
         
         if let properties = GIFProperties {
-            duration = properties[String(kCGImagePropertyGIFUnclampedDelayTime)] as Double
+            duration = properties[String(kCGImagePropertyGIFUnclampedDelayTime)] as! Double
             
             if duration <= 0 {
-                duration = properties[String(kCGImagePropertyGIFDelayTime)] as Double
+                duration = properties[String(kCGImagePropertyGIFDelayTime)] as! Double
             }
         }
         
@@ -287,7 +287,7 @@ class GiFHUD: UIView {
     let FadeDuration    : NSTimeInterval    = 0.3
     let GifSpeed        : CGFloat           = 0.3
     let OverlayAlpha    : CGFloat           = 0.3
-    let Window          : UIWindow = (UIApplication.sharedApplication().delegate as AppDelegate).window!
+    let Window          : UIWindow = (UIApplication.sharedApplication().delegate as! AppDelegate).window!
     
     
     
@@ -446,14 +446,14 @@ class GiFHUD: UIView {
         self.instance.imageView?.image = AnimatedImage.imageWithName(name, delegate: self.instance.imageView)
     }
     
-    class func setGif (bundle: NSBundle) {
+    class func setGifBundle (bundle: NSBundle) {
         self.instance.imageView?.animationImages = nil
         self.instance.imageView?.stopAnimating()
         
         self.instance.imageView?.image = AnimatedImage (data: NSData(contentsOfURL: bundle.resourceURL!)!, delegate: nil)
     }
     
-    class func setGif (images: [UIImage]) {
+    class func setGifImages (images: [UIImage]) {
         self.instance.imageView?.stopAnimatingGif()
         
         self.instance.imageView?.animationImages = images
