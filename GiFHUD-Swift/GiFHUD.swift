@@ -10,6 +10,7 @@ import UIKit
 import ImageIO
 import MobileCoreServices
 
+
 // MARK: - UIImageView Extension
 
 extension UIImageView {
@@ -24,7 +25,7 @@ extension UIImageView {
         }
     }
     
-    var isAnimating: Bool {
+    var isAnimatingGif: Bool {
         return animatableImage?.isAnimating() ?? false
     }
     
@@ -33,8 +34,8 @@ extension UIImageView {
     }
     
     
-    
     // MARK: Method Overrides
+    
     override public func displayLayer(layer: CALayer!) {
         if let image = animatableImage {
             if let frame = image.currentFrame {
@@ -42,7 +43,6 @@ extension UIImageView {
             }
         }
     }
-    
     
     
     // MARK: Setter Methods
@@ -58,7 +58,6 @@ extension UIImageView {
     }
     
     
-    
     // MARK: Animation
     
     func startAnimatingGif() {
@@ -72,6 +71,7 @@ extension UIImageView {
             animatableImage!.pauseAnimation()
         }
     }
+    
 }
 
 
@@ -90,7 +90,7 @@ class AnimatedImage: UIImage {
         if !containsAnimatedGIF { return 0.0 }
         
         var duration = 0.0
-        let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, UInt(index), nil) as NSDictionary
+        let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, Int(index), nil) as NSDictionary
         let GIFProperties: NSDictionary? = imageProperties[String(kCGImagePropertyGIFDictionary)] as? NSDictionary
         
         if let properties = GIFProperties {
@@ -117,14 +117,12 @@ class AnimatedImage: UIImage {
     let maxTimeStep = 1.0
     
     
-    
     // MARK: Public Properties
     
     var delegate: UIImageView?
     var frameDurations = [NSTimeInterval]()
     var frames = [UIImage?]()
     var totalDuration: NSTimeInterval = 0.0
-    
     
     
     // MARK: Private Properties
@@ -136,7 +134,6 @@ class AnimatedImage: UIImage {
     private var timeSinceLastFrameChange: NSTimeInterval = 0.0
     
     
-    
     // MARK: Computed Properties
     
     var currentFrame: UIImage? {
@@ -146,7 +143,6 @@ class AnimatedImage: UIImage {
     private var isAnimated: Bool {
         return imageSource != nil
     }
-    
     
     
     // MARK: Initializers
@@ -166,7 +162,6 @@ class AnimatedImage: UIImage {
     }
     
     
-    
     // MARK: Factories
     
     class func imageWithName(name: String, delegate: UIImageView?) -> Self? {
@@ -180,13 +175,11 @@ class AnimatedImage: UIImage {
     }
     
     
-    
     // MARK: Display Link Helpers
     
     func attachDisplayLink() {
         displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSRunLoopCommonModes)
     }
-    
     
     
     // MARK: Frame Methods
@@ -204,7 +197,7 @@ class AnimatedImage: UIImage {
             totalDuration += frameDuration
             
             if index < framesToPreload {
-                let frameImageRef = CGImageSourceCreateImageAtIndex(self.imageSource, UInt(index), nil)
+                let frameImageRef = CGImageSourceCreateImageAtIndex(self.imageSource, Int(index), nil)
                 let frame = UIImage(CGImage: frameImageRef, scale: 0.0, orientation: UIImageOrientation.Up)
                 frames.append(frame)
             } else {
@@ -234,7 +227,7 @@ class AnimatedImage: UIImage {
             
             if frames[adjustedIndex] == nil {
                 dispatch_async(preloadFrameQueue) {
-                    let frameImageRef = CGImageSourceCreateImageAtIndex(self.imageSource, UInt(adjustedIndex), nil)
+                    let frameImageRef = CGImageSourceCreateImageAtIndex(self.imageSource, Int(adjustedIndex), nil)
                     self.frames[adjustedIndex] = UIImage(CGImage: frameImageRef)
                 }
             }
@@ -258,7 +251,6 @@ class AnimatedImage: UIImage {
             delegate?.layer.setNeedsDisplay()
         }
     }
-    
     
     
     // MARK: Animation
@@ -290,13 +282,11 @@ class GiFHUD: UIView {
     let Window          : UIWindow = (UIApplication.sharedApplication().delegate as! AppDelegate).window!
     
     
-    
     // MARK: Variables
     
     var overlayView     : UIView?
     var imageView       : UIImageView?
     var shown           : Bool
-    
     
     
     // MARK: Singleton
@@ -309,10 +299,9 @@ class GiFHUD: UIView {
     }
     
     
-    
     // MARK: Init
     
-    override init() {
+    init () {
         self.shown = false
         super.init(frame: CGRect (x: 0, y: 0, width: Size, height: Size))
         
@@ -332,7 +321,6 @@ class GiFHUD: UIView {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     
     // MARK: HUD
@@ -392,7 +380,6 @@ class GiFHUD: UIView {
     }
     
     
-    
     // MARK: Effects
     
     func fadeIn () {
@@ -434,7 +421,6 @@ class GiFHUD: UIView {
         
         return overlayView!
     }
-    
     
     
     // MARK: Gif
