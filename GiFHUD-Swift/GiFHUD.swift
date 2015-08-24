@@ -355,6 +355,13 @@ class GiFHUD: UIView {
         })
     }
     
+    class func dismissOnTap () {
+        var tapGesture = BlockTap(tapCount: 1, fingerCount: 1) { (tapGesture) -> Void in
+            self.dismiss()
+        }
+        self.instance.addGestureRecognizer(tapGesture)
+    }
+
     class func dismiss () {
         if (!self.instance.shown) {
             return
