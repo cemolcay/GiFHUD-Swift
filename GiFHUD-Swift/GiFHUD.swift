@@ -355,6 +355,15 @@ class GiFHUD: UIView {
         })
     }
     
+    class func dismissOnTap () {
+        var tapGesture = UITapGestureRecognizer(target: self, action: "userTapped")
+        self.instance.addGestureRecognizer(tapGesture)
+    }
+
+    class func userTapped () {
+        GiFHUD.dismiss()
+    }
+
     class func dismiss () {
         if (!self.instance.shown) {
             return
