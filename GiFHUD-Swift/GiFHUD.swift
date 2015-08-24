@@ -287,7 +287,9 @@ class GiFHUD: UIView {
     var overlayView     : UIView?
     var imageView       : UIImageView?
     var shown           : Bool
-    
+    private var tapGesture: UITapGestureRecognizer?
+    private var didTapClosure: (() -> Void)?
+
     
     // MARK: Singleton
     
@@ -355,13 +357,17 @@ class GiFHUD: UIView {
         })
     }
     
-    class func dismissOnTap () {
-        var tapGesture = UITapGestureRecognizer(target: self, action: "userTapped")
-        self.instance.addGestureRecognizer(tapGesture)
+    class func dismissOnTap (didTap: (() -> Void)? = nil) {
+        self.instance.tapGesture = UITapGestureRecognizer(target: self, action: "userTapped")
+        self.instance.addGestureRecognizer(self.instance.tapGesture!)
+        self.instance.didTapClosure = didTap
     }
 
-    class func userTapped () {
+    @objc private class func userTapped () {
         GiFHUD.dismiss()
+        self.instance.tapGesture = nil
+        self.instance.didTapClosure?()
+        self.instance.didTapClosure = nil
     }
 
     class func dismiss () {
