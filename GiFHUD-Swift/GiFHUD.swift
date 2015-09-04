@@ -289,7 +289,8 @@ class GiFHUD: UIView {
     var shown           : Bool
     private var tapGesture: UITapGestureRecognizer?
     private var didTapClosure: (() -> Void)?
-
+    private var swipeGesture: UISwipeGestureRecognizer?
+    private var didSwipeClosure: (() -> Void)?
     
     // MARK: Singleton
     
@@ -368,6 +369,18 @@ class GiFHUD: UIView {
         self.instance.tapGesture = nil
         self.instance.didTapClosure?()
         self.instance.didTapClosure = nil
+    }
+    
+    class func dismissOnSwipe (didTap: (() -> Void)? = nil) {
+        self.instance.swipeGesture = UISwipeGestureRecognizer(target: self, action: "userSwiped")
+        self.instance.addGestureRecognizer(self.instance.swipeGesture!)
+    }
+    
+    @objc private class func userSwiped () {
+        GiFHUD.dismiss()
+        self.instance.swipeGesture = nil
+        self.instance.didSwipeClosure?()
+        self.instance.didSwipeClosure = nil
     }
 
     class func dismiss () {
