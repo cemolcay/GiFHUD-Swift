@@ -46,6 +46,8 @@ Use `GiFHUD.showForSeconds(3)` if you want show the HUD for a certain time.
 
 Use `GiFHUD.dismissOnTap()` if you want the user to be able to dismiss the HUD with a tap.
 
+Use `GiFHUD.dismissOnSwipe()` if you want the user to be able to dismiss the HUD with a swipe gesture.
+
 Credits
 =======
 
