@@ -338,7 +338,7 @@ class GiFHUD: UIView {
     class func show () {
         dismiss({
             
-            if let anim = self.instance.imageView?.animationImages {
+            if let _ = self.instance.imageView?.animationImages {
                 self.instance.imageView?.startAnimating()
             } else {
                 self.instance.imageView?.startAnimatingGif()
@@ -391,7 +391,7 @@ class GiFHUD: UIView {
         self.instance.overlay().removeFromSuperview()
         self.instance.fadeOut()
         
-        if let anim = self.instance.imageView?.animationImages {
+        if let _ = self.instance.imageView?.animationImages {
             self.instance.imageView?.stopAnimating()
         } else {
             self.instance.imageView?.stopAnimatingGif()
@@ -408,7 +408,7 @@ class GiFHUD: UIView {
             complate ()
         })
         
-        if let anim = self.instance.imageView?.animationImages {
+        if let _ = self.instance.imageView?.animationImages {
             self.instance.imageView?.stopAnimating()
         } else {
             self.instance.imageView?.stopAnimatingGif()
