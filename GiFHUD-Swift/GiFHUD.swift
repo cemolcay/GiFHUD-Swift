@@ -161,6 +161,9 @@ class AnimatedImage: UIImage {
         pauseAnimation()
     }
     
+    required convenience init(imageLiteral name: String) {
+        fatalError("init(imageLiteral:) has not been implemented")
+    }
     
     // MARK: Factories
     
