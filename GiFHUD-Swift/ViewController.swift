@@ -10,31 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        GiFHUD.setGif("pika.gif")
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    GIFHUD.shared.setGif(named: "pika.gif")
+  }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  @IBAction func showPressed(_ sender: AnyObject) {
+    GIFHUD.shared.show()
+  }
 
-    @IBAction func showPressed(_ sender: AnyObject) {
-        GiFHUD.show()
-    }
+  @IBAction func showWithOverlayPressed(_ sender: AnyObject) {
+    GIFHUD.shared.show(withOverlay: true, duration: 2)
+  }
 
-    @IBAction func showWithOverlayPressed(_ sender: AnyObject) {
-        GiFHUD.showWithOverlay()
-
-        let delay = DispatchTime.now() + Double(Int64(2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: delay, execute: {
-            GiFHUD.dismiss()
-        })
-    }
-    
-    @IBAction func dismissPressed(_ sender: AnyObject) {
-        GiFHUD.dismiss()
-    }
+  @IBAction func dismissPressed(_ sender: AnyObject) {
+    GIFHUD.shared.dismiss(completion: {
+      print("GiFHUD dismissed")
+    })
+  }
 }
-
